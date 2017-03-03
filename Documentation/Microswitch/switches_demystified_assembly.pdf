@@ -1,0 +1,521 @@
+%PDF-1.2
+1 0 obj
+<< /Type /Catalog
+/Outlines 2 0 R
+/Pages 3 0 R
+>>
+endobj
+2 0 obj
+<< /Type /Outlines
+/Count 0
+>>
+endobj
+3 0 obj
+<< /Type /Pages
+/Kids [4 0 R]
+/Count 1
+>>
+endobj
+4 0 obj
+<< /Type /Page
+/Parent 3 0 R
+/MediaBox [0 -732.96 541.44 0]
+/Contents 5 0 R
+/Resources << /ProcSet 7 0 R /Font << /F1 8 0 R /F2 9 0 R >> >>
+>>
+endobj
+5 0 obj
+<< /Length 6 0 R >>
+stream
+1 J
+1 j
+.72 0 0 .72 0 0 cm
+1 w 250 -216 m 270 -206 l 320 -206 l 300 -216 l S
+1 w 328 -256 m 360 -222 l S
+1 w
+350 -206 m 360 -200 370 -212 360 -222 c S
+1 w 324 -238 m 350 -206 l S
+1 w 300 -216 m 320 -206 l 320 -306 l 300 -316 l S
+1 w
+320 -234 m 330 -246 330 -266 320 -280 c S
+1 w 260 -282 m 270 -282 l 270 -262 l 260 -262 l s
+1 w 250 -316 m 300 -316 l 300 -216 l 250 -216 l s
+1 w 270 -262 m 280 -256 l 280 -276 l 270 -282 l S
+1 w
+272 -270 m 272 -267 273 -266 274 -266 c 
+275 -266 276 -267 276 -270 c 
+276 -273 275 -274 274 -274 c 
+273 -274 272 -273 272 -270 c 
+ S 
+1 w 260 -262 m 270 -256 l 280 -256 l 270 -262 l S
+1 w 260 -312 m 270 -312 l 270 -292 l 260 -292 l s
+1 w 270 -292 m 280 -286 l 280 -306 l 270 -312 l S
+1 w
+272 -300 m 272 -297 273 -296 274 -296 c 
+275 -296 276 -297 276 -300 c 
+276 -303 275 -304 274 -304 c 
+273 -304 272 -303 272 -300 c 
+ S 
+1 w 260 -292 m 270 -286 l 280 -286 l 270 -292 l S
+1 w [4] 0 d 326 -268 m 350 -296 l S [] 0 d
+1 w [4] 0 d 328 -246 m 360 -280 l S [] 0 d
+BT /F1 13 Tf 379 -216 Td (ON) Tj ET
+BT /F1 13 Tf 381 -292 Td (OFF) Tj ET
+1 w
+350 -296 m 360 -302 370 -290 360 -280 c S
+BT /F1 10 Tf 47 -281 Td (Bat UP = ON \(terminals connected\)) Tj ET
+BT /F1 10 Tf 11 -295 Td (Bat DOWN = OFF \(terminals disconnected\)) Tj ET
+1 w 250 -452 m 270 -442 l 320 -442 l 300 -452 l S
+1 w 328 -492 m 360 -458 l S
+1 w
+350 -442 m 360 -436 370 -448 360 -458 c S
+1 w 324 -474 m 350 -442 l S
+1 w 300 -452 m 320 -442 l 320 -542 l 300 -552 l S
+1 w
+320 -470 m 330 -482 330 -502 320 -516 c S
+1 w 264 -518 m 274 -518 l 274 -498 l 264 -498 l s
+1 w 250 -552 m 300 -552 l 300 -452 l 250 -452 l s
+1 w 274 -498 m 284 -492 l 284 -512 l 274 -518 l S
+1 w
+276 -506 m 276 -503 277 -502 278 -502 c 
+279 -502 280 -503 280 -506 c 
+280 -509 279 -510 278 -510 c 
+277 -510 276 -509 276 -506 c 
+ S 
+1 w 264 -498 m 274 -492 l 284 -492 l 274 -498 l S
+1 w 264 -548 m 274 -548 l 274 -528 l 264 -528 l s
+1 w 274 -528 m 284 -522 l 284 -542 l 274 -548 l S
+1 w
+276 -536 m 276 -533 277 -532 278 -532 c 
+279 -532 280 -533 280 -536 c 
+280 -539 279 -540 278 -540 c 
+277 -540 276 -539 276 -536 c 
+ S 
+1 w 264 -528 m 274 -522 l 284 -522 l 274 -528 l S
+1 w [4] 0 d 326 -504 m 350 -532 l S [] 0 d
+1 w [4] 0 d 328 -482 m 360 -516 l S [] 0 d
+1 w
+350 -532 m 360 -538 370 -526 360 -516 c S
+1 w 264 -488 m 274 -488 l 274 -468 l 264 -468 l s
+1 w 274 -468 m 284 -462 l 284 -482 l 274 -488 l S
+1 w
+276 -476 m 276 -473 277 -472 278 -472 c 
+279 -472 280 -473 280 -476 c 
+280 -479 279 -480 278 -480 c 
+277 -480 276 -479 276 -476 c 
+ S 
+1 w 264 -468 m 274 -462 l 284 -462 l 274 -468 l S
+BT /F1 10 Tf 127 -511 Td (Common terminal) Tj ET
+BT /F1 10 Tf 287 -477 Td (A) Tj ET
+BT /F1 10 Tf 287 -535 Td (B) Tj ET
+BT /F1 10 Tf 287 -507 Td (C) Tj ET
+BT /F1 13 Tf 379 -452 Td (B connected to C) Tj ET
+BT /F1 13 Tf 379 -466 Td (A disconnected from C) Tj ET
+BT /F1 13 Tf 377 -524 Td (A connected to C) Tj ET
+BT /F1 10 Tf 83 -537 Td (Bat UP = \(C connected to B\)) Tj ET
+BT /F1 10 Tf 65 -481 Td (Bat DOWN = \(C connected to A\)) Tj ET
+1 w 250 -762 m 270 -752 l 320 -752 l 300 -762 l S
+1 w 328 -802 m 360 -768 l S
+1 w
+350 -752 m 360 -746 370 -758 360 -768 c S
+1 w 324 -784 m 350 -752 l S
+1 w 300 -762 m 320 -752 l 320 -852 l 300 -862 l S
+1 w
+320 -780 m 330 -792 330 -812 320 -826 c S
+1 w 252 -828 m 262 -828 l 262 -808 l 252 -808 l s
+1 w 262 -808 m 272 -802 l 272 -822 l 262 -828 l S
+1 w
+264 -816 m 264 -813 265 -812 266 -812 c 
+267 -812 268 -813 268 -816 c 
+268 -819 267 -820 266 -820 c 
+265 -820 264 -819 264 -816 c 
+ S 
+1 w 252 -808 m 262 -802 l 272 -802 l 262 -808 l S
+1 w 252 -858 m 262 -858 l 262 -838 l 252 -838 l s
+1 w 262 -838 m 272 -832 l 272 -852 l 262 -858 l S
+1 w 252 -838 m 262 -832 l 272 -832 l 262 -838 l S
+1 w [4] 0 d 326 -814 m 350 -842 l S [] 0 d
+1 w [4] 0 d 328 -792 m 360 -826 l S [] 0 d
+1 w
+350 -842 m 360 -848 370 -836 360 -826 c S
+1 w 252 -798 m 262 -798 l 262 -778 l 252 -778 l s
+1 w 262 -778 m 272 -772 l 272 -792 l 262 -798 l S
+1 w
+264 -786 m 264 -783 265 -782 266 -782 c 
+267 -782 268 -783 268 -786 c 
+268 -789 267 -790 266 -790 c 
+265 -790 264 -789 264 -786 c 
+ S 
+1 w 252 -778 m 262 -772 l 272 -772 l 262 -778 l S
+BT /F1 10 Tf 113 -819 Td (Common terminal 1) Tj ET
+BT /F1 10 Tf 253 -791 Td (A) Tj ET
+BT /F1 10 Tf 253 -851 Td (B) Tj ET
+BT /F1 10 Tf 253 -821 Td (C) Tj ET
+BT /F1 13 Tf 379 -722 Td (B connected to C) Tj ET
+BT /F1 13 Tf 379 -824 Td (A connected to C) Tj ET
+BT /F1 10 Tf 75 -845 Td (Bat UP = \(C connected to B\)) Tj ET
+BT /F1 10 Tf 57 -791 Td (Bat DOWN = \(C connected to A\)) Tj ET
+1 w 286 -808 m 296 -802 l 296 -822 l 286 -828 l S
+1 w
+288 -816 m 288 -813 289 -812 290 -812 c 
+291 -812 292 -813 292 -816 c 
+292 -819 291 -820 290 -820 c 
+289 -820 288 -819 288 -816 c 
+ S 
+1 w 276 -808 m 286 -802 l 296 -802 l 286 -808 l S
+1 w 286 -838 m 296 -832 l 296 -852 l 286 -858 l S
+1 w
+288 -846 m 288 -843 289 -842 290 -842 c 
+291 -842 292 -843 292 -846 c 
+292 -849 291 -850 290 -850 c 
+289 -850 288 -849 288 -846 c 
+ S 
+1 w 276 -838 m 286 -832 l 296 -832 l 286 -838 l S
+1 w
+288 -786 m 288 -783 289 -782 290 -782 c 
+291 -782 292 -783 292 -786 c 
+292 -789 291 -790 290 -790 c 
+289 -790 288 -789 288 -786 c 
+ S 
+1 w 276 -778 m 286 -772 l 296 -772 l 286 -778 l S
+1 w 276 -798 m 286 -798 l 286 -778 l 276 -778 l s
+BT /F1 10 Tf 277 -791 Td (D) Tj ET
+1 w 276 -828 m 286 -828 l 286 -808 l 276 -808 l s
+BT /F1 10 Tf 277 -821 Td (E) Tj ET
+1 w 276 -858 m 286 -858 l 286 -838 l 276 -838 l s
+BT /F1 10 Tf 277 -851 Td (F) Tj ET
+1 w
+264 -846 m 264 -843 265 -842 266 -842 c 
+267 -842 268 -843 268 -846 c 
+268 -849 267 -850 266 -850 c 
+265 -850 264 -849 264 -846 c 
+ S 
+BT /F1 13 Tf 377 -540 Td (B disconnected from C) Tj ET
+BT /F1 10 Tf 361 -959 Td (Common terminal 2) Tj ET
+1 w 250 -862 m 300 -862 l 300 -762 l 250 -762 l s
+1 w 286 -778 m 296 -772 l 296 -792 l 286 -798 l S
+BT /F1 10 Tf 363 -927 Td (Bat DOWN = \(E connected to D\)) Tj ET
+BT /F1 10 Tf 363 -993 Td (Bat UP = \(E connected to F\)) Tj ET
+BT /F1 13 Tf 379 -736 Td (A disconnected from C) Tj ET
+BT /F1 13 Tf 379 -750 Td (and) Tj ET
+BT /F1 13 Tf 379 -764 Td (F connected to E) Tj ET
+BT /F1 13 Tf 379 -778 Td (D disconnected from E) Tj ET
+BT /F1 13 Tf 379 -840 Td (B disconnected from C) Tj ET
+BT /F1 13 Tf 379 -854 Td (and) Tj ET
+BT /F1 13 Tf 379 -868 Td (D connected to E) Tj ET
+BT /F1 13 Tf 379 -882 Td (F disconnected from E) Tj ET
+1 w [4] 0 d 274 -700 m 274 -932 l S [] 0 d
+3 w 616 -270 m 656 -250 l S
+1 w
+610 -270 m 610 -266 612 -264 616 -264 c 
+620 -264 622 -266 622 -270 c 
+622 -274 620 -276 616 -276 c 
+612 -276 610 -274 610 -270 c 
+ B* 
+1 w
+650 -270 m 650 -266 652 -264 656 -264 c 
+660 -264 662 -266 662 -270 c 
+662 -274 660 -276 656 -276 c 
+652 -276 650 -274 650 -270 c 
+ B* 
+3 w 576 -270 m 616 -270 l S
+3 w 656 -270 m 696 -270 l S
+1 w
+610 -494 m 610 -490 612 -488 616 -488 c 
+620 -488 622 -490 622 -494 c 
+622 -498 620 -500 616 -500 c 
+612 -500 610 -498 610 -494 c 
+ B* 
+1 w
+650 -476 m 650 -472 652 -470 656 -470 c 
+660 -470 662 -472 662 -476 c 
+662 -480 660 -482 656 -482 c 
+652 -482 650 -480 650 -476 c 
+ B* 
+3 w 576 -494 m 616 -494 l S
+3 w 656 -476 m 696 -476 l S
+1 w
+650 -508 m 650 -504 652 -502 656 -502 c 
+660 -502 662 -504 662 -508 c 
+662 -512 660 -514 656 -514 c 
+652 -514 650 -512 650 -508 c 
+ B* 
+3 w 656 -508 m 696 -508 l S
+3 w 616 -494 m 664 -502 l S
+1 w
+610 -734 m 610 -730 612 -728 616 -728 c 
+620 -728 622 -730 622 -734 c 
+622 -738 620 -740 616 -740 c 
+612 -740 610 -738 610 -734 c 
+ B* 
+1 w
+650 -716 m 650 -712 652 -710 656 -710 c 
+660 -710 662 -712 662 -716 c 
+662 -720 660 -722 656 -722 c 
+652 -722 650 -720 650 -716 c 
+ B* 
+3 w 576 -734 m 616 -734 l S
+3 w 656 -716 m 696 -716 l S
+1 w
+650 -748 m 650 -744 652 -742 656 -742 c 
+660 -742 662 -744 662 -748 c 
+662 -752 660 -754 656 -754 c 
+652 -754 650 -752 650 -748 c 
+ B* 
+3 w 656 -748 m 696 -748 l S
+3 w 616 -734 m 664 -742 l S
+1 w
+612 -806 m 612 -802 614 -800 618 -800 c 
+622 -800 624 -802 624 -806 c 
+624 -810 622 -812 618 -812 c 
+614 -812 612 -810 612 -806 c 
+ B* 
+1 w
+652 -788 m 652 -784 654 -782 658 -782 c 
+662 -782 664 -784 664 -788 c 
+664 -792 662 -794 658 -794 c 
+654 -794 652 -792 652 -788 c 
+ B* 
+3 w 578 -806 m 618 -806 l S
+3 w 658 -788 m 698 -788 l S
+1 w
+652 -820 m 652 -816 654 -814 658 -814 c 
+662 -814 664 -816 664 -820 c 
+664 -824 662 -826 658 -826 c 
+654 -826 652 -824 652 -820 c 
+ B* 
+3 w 658 -820 m 698 -820 l S
+3 w 618 -806 m 666 -814 l S
+3 w 636 -738 m 636 -746 l S
+3 w 636 -754 m 636 -762 l S
+3 w 636 -770 m 636 -778 l S
+3 w 636 -786 m 636 -794 l S
+3 w 636 -802 m 636 -810 l S
+BT /F1 10 Tf 687 -469 Td (A) Tj ET
+BT /F1 10 Tf 689 -521 Td (B) Tj ET
+BT /F1 10 Tf 565 -497 Td (C) Tj ET
+BT /F1 10 Tf 565 -737 Td (C) Tj ET
+BT /F1 10 Tf 687 -709 Td (A) Tj ET
+BT /F1 10 Tf 689 -761 Td (B) Tj ET
+BT /F1 10 Tf 567 -809 Td (E) Tj ET
+BT /F1 10 Tf 689 -781 Td (D) Tj ET
+BT /F1 10 Tf 691 -833 Td (F) Tj ET
+BT /F2 19 Tf 31 -608 Td (DPDT) Tj ET
+BT /F2 19 Tf 31 -184 Td (SPST) Tj ET
+BT /F1 13 Tf 549 -234 Td (SPST Schematic Symbol) Tj ET
+BT /F1 13 Tf 561 -440 Td (SPDT Schematic Symbol) Tj ET
+BT /F1 13 Tf 557 -682 Td (DPDT Schematic Symbol) Tj ET
+BT /F2 19 Tf 31 -364 Td (SPDT) Tj ET
+3 w 12 -328 m 730 -328 l S
+BT /F1 10 Tf 29 -381 Td (A Single Pole Double Throw toggle switch) Tj ET
+BT /F1 10 Tf 29 -392 Td (connects a common terminal to one or the) Tj ET
+BT /F1 10 Tf 29 -403 Td (other of two terminals. It is always connected) Tj ET
+BT /F1 10 Tf 29 -414 Td (to one or the other. The two outside terminals) Tj ET
+BT /F1 10 Tf 29 -425 Td (are never connected by the switch.) Tj ET
+BT /F1 10 Tf 31 -627 Td (A Double Pole Double Throw toggle switch) Tj ET
+BT /F1 10 Tf 31 -638 Td (acts exactly like two separate SPDT switches) Tj ET
+BT /F1 10 Tf 31 -649 Td (connected to the same switch bat. It has two) Tj ET
+BT /F1 10 Tf 31 -660 Td (separate common terminals and each of those) Tj ET
+BT /F1 10 Tf 31 -671 Td (is connected to one or the other of the other) Tj ET
+BT /F1 10 Tf 31 -682 Td (two terminals on the same side of the switch.) Tj ET
+BT /F1 10 Tf 31 -693 Td (The dotted line in the picture is to illustrate that) Tj ET
+BT /F1 10 Tf 31 -704 Td (the switch is actually two SPDT switches in) Tj ET
+BT /F1 10 Tf 31 -715 Td (one package with one switch bat.) Tj ET
+BT /F2 19 Tf 139 -46 Td (SPST, SPDT, and DPDT Switches Demystified) Tj ET
+BT /F1 10 Tf 31 -203 Td (A Single Pole Single Throw toggle switch) Tj ET
+BT /F1 10 Tf 31 -214 Td (connects or disconnects one terminal) Tj ET
+BT /F1 10 Tf 31 -225 Td (either to or from another. It is the simplest) Tj ET
+BT /F1 10 Tf 31 -236 Td (switch.) Tj ET
+3 w 18 -586 m 736 -586 l S
+BT /F1 10 Tf 21 -79 Td (I assure you that 99.99% of all toggle switches work as I explain below. The mechnical parts inside are designed to connect the terminals just as I explain here. ) Tj ET
+BT /F1 10 Tf 21 -90 Td (Perhaps there are some Rube Goldberg switches out there that work opposite of this but they are few and far between and I assure you that the normal switches ) Tj ET
+BT /F1 10 Tf 21 -101 Td (you buy will work as described below. One exception worth mentioning is that if a double throw switch is specified as ON-OFF-ON is means that there is a special) Tj ET
+BT /F1 10 Tf 21 -112 Td (middle position in which the center pole\(s\) does not touch either of the other poles. This is known as a "center off" switch. The normal double throw switches are) Tj ET
+BT /F1 10 Tf 21 -123 Td (specified as ON-NONE-ON which means they have no "center" position and are always in contact with one of the other pole\(s\).) Tj ET
+BT /F1 13 Tf 301 -364 Td (To use a SPDT switch as a SPST switch just use the) Tj ET
+BT /F1 13 Tf 301 -378 Td (common terminal and either of the other terminals. So...) Tj ET
+BT /F1 13 Tf 301 -392 Td (you could use C and A or you could use C and B. ) Tj ET
+BT /F1 13 Tf 301 -618 Td (A DPDT switch works just like ) Tj ET
+BT /F1 13 Tf 301 -632 Td (two separate SPDT switches ) Tj ET
+BT /F1 13 Tf 301 -646 Td (attached to the same switch bat.) Tj ET
+1 w 370 -246 m 370 -214 l 0.00 0.00 1.00 RG
+0.00 0.00 1.00 rg S
+S
+373 -223 m 370 -214 l 367 -223 l b*
+0 0 0 RG
+0 0 0 rg
+1 w 370 -266 m 370 -300 l 0.00 0.00 1.00 RG
+0.00 0.00 1.00 rg S
+S
+367 -291 m 370 -300 l 373 -291 l b*
+0 0 0 RG
+0 0 0 rg
+1 w 212 -298 m 256 -298 l 0.00 0.00 1.00 RG
+0.00 0.00 1.00 rg S
+S
+247 -301 m 256 -298 l 247 -295 l b*
+0 0 0 RG
+0 0 0 rg
+1 w 212 -272 m 256 -272 l 0.00 0.00 1.00 RG
+0.00 0.00 1.00 rg S
+S
+247 -275 m 256 -272 l 247 -269 l b*
+0 0 0 RG
+0 0 0 rg
+1 w 370 -482 m 370 -450 l 0.00 0.00 1.00 RG
+0.00 0.00 1.00 rg S
+S
+373 -459 m 370 -450 l 367 -459 l b*
+0 0 0 RG
+0 0 0 rg
+1 w 370 -502 m 370 -536 l 0.00 0.00 1.00 RG
+0.00 0.00 1.00 rg S
+S
+367 -527 m 370 -536 l 373 -527 l b*
+0 0 0 RG
+0 0 0 rg
+1 w 210 -534 m 254 -534 l 0.00 0.00 1.00 RG
+0.00 0.00 1.00 rg S
+S
+245 -537 m 254 -534 l 245 -531 l b*
+0 0 0 RG
+0 0 0 rg
+1 w 210 -508 m 254 -508 l 0.00 0.00 1.00 RG
+0.00 0.00 1.00 rg S
+S
+245 -511 m 254 -508 l 245 -505 l b*
+0 0 0 RG
+0 0 0 rg
+1 w 210 -478 m 254 -478 l 0.00 0.00 1.00 RG
+0.00 0.00 1.00 rg S
+S
+245 -481 m 254 -478 l 245 -475 l b*
+0 0 0 RG
+0 0 0 rg
+1 w 370 -812 m 370 -846 l 0.00 0.00 1.00 RG
+0.00 0.00 1.00 rg S
+S
+367 -837 m 370 -846 l 373 -837 l b*
+0 0 0 RG
+0 0 0 rg
+1 w 202 -842 m 246 -842 l 0.00 0.00 1.00 RG
+0.00 0.00 1.00 rg S
+S
+237 -845 m 246 -842 l 237 -839 l b*
+0 0 0 RG
+0 0 0 rg
+1 w 202 -816 m 246 -816 l 0.00 0.00 1.00 RG
+0.00 0.00 1.00 rg S
+S
+237 -819 m 246 -816 l 237 -813 l b*
+0 0 0 RG
+0 0 0 rg
+1 w 202 -788 m 246 -788 l 0.00 0.00 1.00 RG
+0.00 0.00 1.00 rg S
+S
+237 -791 m 246 -788 l 237 -785 l b*
+0 0 0 RG
+0 0 0 rg
+1 w 314 -804 m 314 -924 l 0.00 0.00 1.00 RG
+0.00 0.00 1.00 rg S
+S
+0 0 0 RG
+0 0 0 rg
+1 w 314 -924 m 356 -924 l 0.00 0.00 1.00 RG
+0.00 0.00 1.00 rg S
+S
+0 0 0 RG
+0 0 0 rg
+1 w 284 -860 m 284 -968 l 0.00 0.00 1.00 RG
+0.00 0.00 1.00 rg S
+S
+287 -869 m 284 -860 l 281 -869 l b*
+0 0 0 RG
+0 0 0 rg
+1 w 284 -968 m 284 -990 l 0.00 0.00 1.00 RG
+0.00 0.00 1.00 rg S
+S
+0 0 0 RG
+0 0 0 rg
+1 w 284 -990 m 358 -990 l 0.00 0.00 1.00 RG
+0.00 0.00 1.00 rg S
+S
+0 0 0 RG
+0 0 0 rg
+1 w 306 -956 m 356 -956 l 0.00 0.00 1.00 RG
+0.00 0.00 1.00 rg S
+S
+0 0 0 RG
+0 0 0 rg
+1 w 314 -804 m 294 -790 l 0.00 0.00 1.00 RG
+0.00 0.00 1.00 rg S
+S
+303 -792 m 294 -790 l 300 -797 l b*
+0 0 0 RG
+0 0 0 rg
+1 w 306 -830 m 292 -820 l 0.00 0.00 1.00 RG
+0.00 0.00 1.00 rg S
+S
+301 -823 m 292 -820 l 297 -828 l b*
+0 0 0 RG
+0 0 0 rg
+1 w 306 -830 m 306 -956 l 0.00 0.00 1.00 RG
+0.00 0.00 1.00 rg S
+S
+0 0 0 RG
+0 0 0 rg
+1 w 370 -786 m 370 -754 l 0.00 0.00 1.00 RG
+0.00 0.00 1.00 rg S
+S
+373 -763 m 370 -754 l 367 -763 l b*
+0 0 0 RG
+0 0 0 rg
+1 w 288 -698 m 288 -560 l 0.00 0.00 1.00 RG
+0.00 0.00 1.00 rg S
+S
+291 -569 m 288 -560 l 285 -569 l b*
+0 0 0 RG
+0 0 0 rg
+endstream
+endobj
+6 0 obj
+14931
+endobj
+7 0 obj
+[/PDF]
+endobj
+8 0 obj
+<< /Type /Font
+/Subtype /Type1
+/Name /F1
+/BaseFont /Helvetica
+/Encoding /MacRomanEncoding
+>>
+endobj
+9 0 obj
+<< /Type /Font
+/Subtype /Type1
+/Name /F2
+/BaseFont /Helvetica-Bold
+/Encoding /MacRomanEncoding
+>>
+endobj
+xref
+0 10
+0000000000 65535 f
+0000000010 00000 n
+0000000081 00000 n
+0000000132 00000 n
+0000000195 00000 n
+0000000361 00000 n
+0000015349 00000 n
+0000015373 00000 n
+0000015398 00000 n
+0000015514 00000 n
+trailer
+<< /Size 10
+/Root 1 0 R
+>>
+startxref
+15635
+%%EOF
