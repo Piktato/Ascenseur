@@ -10,21 +10,31 @@ namespace PWM_test
     {
         public static void Main()
         {
-            //OutputPort dir = new OutputPort(FEZSpider.Socket8.Pin9, true);
+            AnalogInput capt = new AnalogInput((Cpu.AnalogChannel)Cpu.AnalogChannel.ANALOG_0);
+            OutputPort dir = new OutputPort(FEZSpider.Socket8.Pin9, true);
+            InputPort microswitch = new InputPort(FEZSpider.Socket4.Pin3, false, Port.ResistorMode.PullDown);
+            
             double frequence = 38000; // Période en microseconde
             double rapportCyclique = 0.5; // Période en microseconde
+
             PWM motorDriver = new PWM(FEZSpider.Socket8.Pwm7, frequence, rapportCyclique, false);
+
             motorDriver.Stop();
-            int i = 0;
-            /*while (true)
+                
+
+            while (true)
             {
-                i++;
-                if (i >= 100000)
+                if (microswitch.Read())
                 {
-                    dir.Write(!dir.Read());
-                    i = 0;
+                    motorDriver.Stop();
                 }
-            }*/
+
+                Debug.Print("Distance : " + capt.Read().ToString());
+
+                Debug.Print(microswitch.Read().ToString());
+                Thread.Sleep(50);
+            }
+
         }
     }
 }
