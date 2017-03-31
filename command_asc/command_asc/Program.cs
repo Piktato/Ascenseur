@@ -6,22 +6,24 @@ using GHI.Glide.UI;
 using System.Threading;
 using GHI.Pins;
 using GHI.Processor;
-using GTM = Gadgeteer.Modules;
-
+using System.IO.Ports;
+using System.Text;
 namespace command_asc
 {
     public class Program
     {
         public static Window windows;
-        public static TextBlock txtttttttt;
-        
+
+        public static SerialPort UART = new SerialPort("COM2", 115200);
+
         public static void Main()
         {
+            UART.Open();
+
             windows = GlideLoader.LoadWindow(Resources.GetString(Resources.StringResources.windows));
 
             GlideTouch.Initialize();
 
-            txtttttttt = (TextBlock)windows.GetChildByName("textBlock");
             for (int i = 1; i <= 3; i++)
             {
                 Button btn = (Button)windows.GetChildByName(i.ToString());
@@ -32,19 +34,25 @@ namespace command_asc
             stopBtn.TapEvent += stop;
 
             Glide.MainWindow = windows;
-            Thread.Sleep(-1);
+
+        }
+
+        private static void sendCommand(string command)
+        {
+            byte[] dataSend = Encoding.UTF8.GetBytes(command);
+            UART.Write(dataSend, 0, dataSend.Length);
         }
 
         private static void OnTap(object sender)
         {
-            txtttttttt.Text = "";
-            txtttttttt.Text = (sender as Button).Name;
-            txtttttttt.Invalidate();
+            Debug.Print("Etage : " + (sender as Button).Name);
+            sendCommand((sender as Button).Name);
         }
 
         private static void stop(object sender)
         {
-            txtttttttt.Text = (sender as Button).Name;
+            Debug.Print("Stop");
+            sendCommand("s");
         }
     }
 }

@@ -3,6 +3,8 @@ using Microsoft.SPOT;
 using Microsoft.SPOT.Hardware;
 using GHI.Pins;
 using System.Threading;
+using System.Text;
+using System.IO.Ports;
 
 namespace ascenseur_prog
 {
@@ -40,7 +42,7 @@ namespace ascenseur_prog
                 if (microswitchBas.Read() && microSwitchHaut.Read())
                 {
                     motorDriver.Stop();
-                    break;
+                    return;
                 }
 
                 i++;
@@ -51,6 +53,12 @@ namespace ascenseur_prog
                     i = 0;
                 }
             }
+        }
+
+        public void recieveData()
+        {
+            
+            
         }
     }
 }

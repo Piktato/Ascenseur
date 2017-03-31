@@ -1,9 +1,8 @@
 <Glide>
 	<Window Name="window" Width="320" Height="240" BackColor="dce3e7">
     <Button Name="stop" X="100" Y="10" Width="120" Height="32" Alpha="255" Text="Stop !" Font="5" FontColor="000000" DisabledFontColor="808080" TintColor="000000" TintAmount="0"/>
-    <Button Name="1" X="100" Y="70" Width="120" Height="32" Alpha="255" Text="Etage 1" Font="5" FontColor="000000" DisabledFontColor="808080" TintColor="000000" TintAmount="0"/>
+    <Button Name="3" X="100" Y="70" Width="120" Height="32" Alpha="255" Text="Etage 3" Font="5" FontColor="000000" DisabledFontColor="808080" TintColor="000000" TintAmount="0"/>
     <Button Name="2" X="100" Y="130" Width="120" Height="32" Alpha="255" Text="Etage 2" Font="5" FontColor="000000" DisabledFontColor="808080" TintColor="000000" TintAmount="0"/>
-    <Button Name="3" X="100" Y="190" Width="120" Height="32" Alpha="255" Text="Etage 3" Font="5" FontColor="000000" DisabledFontColor="808080" TintColor="000000" TintAmount="0"/>
-    <TextBlock Name="textBlock" X="0" Y="100" Width="100" Height="32" Alpha="255" Text="text" TextAlign="Center" Font="5" FontColor="000000"/>
+    <Button Name="1" X="100" Y="190" Width="120" Height="32" Alpha="255" Text="Etage 1" Font="5" FontColor="000000" DisabledFontColor="808080" TintColor="000000" TintAmount="0"/>
   </Window>
 </Glide>
