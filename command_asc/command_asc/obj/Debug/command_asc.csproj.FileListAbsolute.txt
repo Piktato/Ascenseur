@@ -38,3 +38,43 @@ E:\Ateliers\Atelier Micro-Controleur\Ascenseur\Ascenseur\command_asc\command_asc
 E:\Ateliers\Atelier Micro-Controleur\Ascenseur\Ascenseur\command_asc\command_asc\bin\Debug\BE\GHI.Hardware.pdbx
 E:\Ateliers\Atelier Micro-Controleur\Ascenseur\Ascenseur\command_asc\command_asc\bin\Debug\GHI.Hardware.dll
 E:\Ateliers\Atelier Micro-Controleur\Ascenseur\Ascenseur\command_asc\command_asc\bin\Debug\GHI.Hardware.xml
+C:\Users\Ramushia\Documents\GitHub\Ascenseur\command_asc\command_asc\bin\Debug\le\command_asc.exe
+C:\Users\Ramushia\Documents\GitHub\Ascenseur\command_asc\command_asc\bin\Debug\be\command_asc.exe
+C:\Users\Ramushia\Documents\GitHub\Ascenseur\command_asc\command_asc\bin\Debug\le\command_asc.pdb
+C:\Users\Ramushia\Documents\GitHub\Ascenseur\command_asc\command_asc\bin\Debug\be\command_asc.pdb
+C:\Users\Ramushia\Documents\GitHub\Ascenseur\command_asc\command_asc\bin\Debug\command_asc.exe
+C:\Users\Ramushia\Documents\GitHub\Ascenseur\command_asc\command_asc\bin\Debug\command_asc.pdb
+C:\Users\Ramushia\Documents\GitHub\Ascenseur\command_asc\command_asc\bin\Debug\le\command_asc.pe
+C:\Users\Ramushia\Documents\GitHub\Ascenseur\command_asc\command_asc\bin\Debug\le\command_asc.pdbx
+C:\Users\Ramushia\Documents\GitHub\Ascenseur\command_asc\command_asc\bin\Debug\be\command_asc.pe
+C:\Users\Ramushia\Documents\GitHub\Ascenseur\command_asc\command_asc\bin\Debug\be\command_asc.pdbx
+C:\Users\Ramushia\Documents\GitHub\Ascenseur\command_asc\command_asc\bin\Debug\LE\GHI.Glide.pe
+C:\Users\Ramushia\Documents\GitHub\Ascenseur\command_asc\command_asc\bin\Debug\LE\GHI.Hardware.pe
+C:\Users\Ramushia\Documents\GitHub\Ascenseur\command_asc\command_asc\bin\Debug\LE\GHI.Pins.pe
+C:\Users\Ramushia\Documents\GitHub\Ascenseur\command_asc\command_asc\bin\Debug\BE\GHI.Glide.pe
+C:\Users\Ramushia\Documents\GitHub\Ascenseur\command_asc\command_asc\bin\Debug\BE\GHI.Hardware.pe
+C:\Users\Ramushia\Documents\GitHub\Ascenseur\command_asc\command_asc\bin\Debug\BE\GHI.Pins.pe
+C:\Users\Ramushia\Documents\GitHub\Ascenseur\command_asc\command_asc\bin\Debug\LE\GHI.Glide.pdbx
+C:\Users\Ramushia\Documents\GitHub\Ascenseur\command_asc\command_asc\bin\Debug\LE\GHI.Hardware.pdbx
+C:\Users\Ramushia\Documents\GitHub\Ascenseur\command_asc\command_asc\bin\Debug\LE\GHI.Pins.pdbx
+C:\Users\Ramushia\Documents\GitHub\Ascenseur\command_asc\command_asc\bin\Debug\BE\GHI.Glide.pdbx
+C:\Users\Ramushia\Documents\GitHub\Ascenseur\command_asc\command_asc\bin\Debug\BE\GHI.Hardware.pdbx
+C:\Users\Ramushia\Documents\GitHub\Ascenseur\command_asc\command_asc\bin\Debug\BE\GHI.Pins.pdbx
+C:\Users\Ramushia\Documents\GitHub\Ascenseur\command_asc\command_asc\bin\Debug\GHI.Glide.dll
+C:\Users\Ramushia\Documents\GitHub\Ascenseur\command_asc\command_asc\bin\Debug\GHI.Hardware.dll
+C:\Users\Ramushia\Documents\GitHub\Ascenseur\command_asc\command_asc\bin\Debug\GHI.Pins.dll
+C:\Users\Ramushia\Documents\GitHub\Ascenseur\command_asc\command_asc\bin\Debug\GHI.Glide.xml
+C:\Users\Ramushia\Documents\GitHub\Ascenseur\command_asc\command_asc\bin\Debug\GHI.Hardware.xml
+C:\Users\Ramushia\Documents\GitHub\Ascenseur\command_asc\command_asc\bin\Debug\GHI.Pins.xml
+C:\Users\Ramushia\Documents\GitHub\Ascenseur\command_asc\command_asc\obj\Debug\command_asc.csprojResolveAssemblyReference.cache
+C:\Users\Ramushia\Documents\GitHub\Ascenseur\command_asc\command_asc\obj\Debug\TinyCLR_DebugReferences.cache
+C:\Users\Ramushia\Documents\GitHub\Ascenseur\command_asc\command_asc\obj\Debug\command_asc.Resources.resources
+C:\Users\Ramushia\Documents\GitHub\Ascenseur\command_asc\command_asc\obj\Debug\command_asc.csproj.GenerateResource.Cache
+C:\Users\Ramushia\Documents\GitHub\Ascenseur\command_asc\command_asc\obj\Debug\command_asc.Resources.tinyresources
+C:\Users\Ramushia\Documents\GitHub\Ascenseur\command_asc\command_asc\obj\Debug\TinyResGen.cache
+C:\Users\Ramushia\Documents\GitHub\Ascenseur\command_asc\command_asc\obj\Debug\be\command_asc.pe
+C:\Users\Ramushia\Documents\GitHub\Ascenseur\command_asc\command_asc\obj\Debug\be\command_asc.pdbx
+C:\Users\Ramushia\Documents\GitHub\Ascenseur\command_asc\command_asc\obj\Debug\command_asc.exe
+C:\Users\Ramushia\Documents\GitHub\Ascenseur\command_asc\command_asc\obj\Debug\command_asc.pdb
+C:\Users\Ramushia\Documents\GitHub\Ascenseur\command_asc\command_asc\obj\Debug\le\command_asc.pe
+C:\Users\Ramushia\Documents\GitHub\Ascenseur\command_asc\command_asc\obj\Debug\le\command_asc.pdbx

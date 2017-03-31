@@ -14,7 +14,7 @@ namespace command_asc
     {
         public static Window windows;
 
-        public static SerialPort UART = new SerialPort("COM2", 115200);
+        public static SerialPort UART = new SerialPort("COM3", 115200);
 
         public static void Main()
         {
@@ -34,13 +34,14 @@ namespace command_asc
             stopBtn.TapEvent += stop;
 
             Glide.MainWindow = windows;
-
+            Thread.Sleep(-1);
         }
 
         private static void sendCommand(string command)
         {
             byte[] dataSend = Encoding.UTF8.GetBytes(command);
             UART.Write(dataSend, 0, dataSend.Length);
+            Debug.Print("Send !");
         }
 
         private static void OnTap(object sender)
