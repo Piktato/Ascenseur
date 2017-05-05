@@ -15,24 +15,27 @@ namespace ascenseur_prog
         static int[] etage1 = { 140, 150 };
         static int[] etage2 = { 280, 290 };
         static int[] etage3 = { 480, 490 };
+        static int etageToGo;
 
         //  Communication
         static SerialPort UART = new SerialPort("COM3", 115200);
         static byte[] rx_byte = new byte[1];
-        //  Capteur
+
+        //  Capteurs
         static AnalogInput captBas = new AnalogInput(Cpu.AnalogChannel.ANALOG_0);
         static AnalogInput captHaut = new AnalogInput(Cpu.AnalogChannel.ANALOG_3);
 
         //  Microswitch
         static InputPort microSwitchBas = new InterruptPort(FEZSpider.Socket4.Pin3, true, Port.ResistorMode.PullDown, Port.InterruptMode.InterruptEdgeLow);
-        static InputPort microSwitchHaut = new InterruptPort(FEZSpider.Socket3.Pin3, false, Port.ResistorMode.PullDown, Port.InterruptMode.InterruptEdgeLow);
+        static InputPort microSwitchHaut = new InterruptPort(FEZSpider.Socket3.Pin3, true, Port.ResistorMode.PullDown, Port.InterruptMode.InterruptEdgeLow);
 
         //  Motor
         static OutputPort dir = new OutputPort(FEZSpider.Socket11.Pin9, true);
         static PWM motorDriver;
 
         static bool arrive = false;
-        static bool arreter = true;
+
+        static Thread goEtage = new Thread(aLetage);
 
         public static void Main()
         {
@@ -54,13 +57,14 @@ namespace ascenseur_prog
             Thread.Sleep(-1);
         }
 
-        static int calculateDistance(AnalogInput capt)
+        static int calculateDistance()
         {
             int moyenne = 0;
 
             for (int i = 0; i < 100; i++)
             {
-                moyenne += captBas.ReadRaw();
+                Debug.Print(captBas.ReadRaw().ToString());
+                moyenne += (int)(captBas.ReadRaw());
             }
 
             moyenne /= 100;
@@ -68,14 +72,15 @@ namespace ascenseur_prog
             return moyenne;
         }
 
-        public static void aLetage(int etageToGo)
+        public static void aLetage()
         {
             int oldMoyenne = 0;
-            changerEtatMotor(!arreter);
+            changerEtatMotor(true);
+            UpOrDown(calculateDistance());
 
             while (!arrive)
             {
-                int moyenne = calculateDistance(captBas);
+                int moyenne = calculateDistance();
 
                 if (dir.Read())
                 {
@@ -94,30 +99,47 @@ namespace ascenseur_prog
                     }
                 }
 
-                arrive = arriverALetage(oldMoyenne, etageToGo);
+                arrive = arriverALetage(oldMoyenne);
             }
-            arrive = false;
 
-            changerEtatMotor(!arreter);
+            changerEtatMotor(false);
+            goEtage.Suspend();
         }
-        static bool arriverALetage(int distance, int etageToGo)
+
+        static bool arriverALetage(int distance)
         {
             bool stop = false;
             int[] distEtage = etages[etageToGo] as int[];
 
             if (distance < distEtage[1] && distance > distEtage[0])
             {
+                /*
                 Debug.Print(distEtage[0].ToString());
                 Debug.Print(distEtage[1].ToString());
                 Debug.Print(distance.ToString());
-
+                */
                 stop = true;
             }
 
             return stop;
         }
+
+        static void UpOrDown(int state)
+        {
+            int[] etage = etages[etageToGo] as int[];
+            if (state < etage[1] && state < etage[0])
+            {
+                changeSensMotor(false);
+            }
+            else
+            {
+                changeSensMotor(true);
+            }
+        }
+
         static void microswitch_OnInterrupt(uint data1, uint data2, DateTime time)
         {
+            Debug.Print("l'autre sens");
             if (data1 == 33)
             {
                 changeSensMotor(false);
@@ -128,7 +150,6 @@ namespace ascenseur_prog
             }
         }
 
-
         static void changeSensMotor(bool sens)
         {
             dir.Write(sens);
@@ -136,11 +157,12 @@ namespace ascenseur_prog
 
         static void changerEtatMotor(bool etat)
         {
-            if (!etat)
+            if (etat)
                 motorDriver.Start();
             else
+            {
                 motorDriver.Stop();
-            arreter = !arreter;
+            }
         }
 
         static void UART_DataReceived(object sender, SerialDataReceivedEventArgs e)
@@ -149,11 +171,17 @@ namespace ascenseur_prog
             char car = Convert.ToChar(rx_byte[0]);
             if (car != 's')
             {
-                aLetage(Convert.ToInt32(car.ToString()) - 1);
+                Debug.Print("Etage");
+                etageToGo = Convert.ToInt32(car.ToString()) - 1;
+                arrive = false;
+                if (!goEtage.IsAlive)
+                {
+                    goEtage.Start();
+                }
             }
             else
             {
-                changerEtatMotor(!arreter);
+                changerEtatMotor(false);
             }
         }
     }
