@@ -63,8 +63,7 @@ namespace ascenseur_prog
 
             for (int i = 0; i < 100; i++)
             {
-                Debug.Print(captBas.ReadRaw().ToString());
-                moyenne += (int)(captBas.ReadRaw());
+                moyenne += captBas.ReadRaw();
             }
 
             moyenne /= 100;
@@ -98,7 +97,6 @@ namespace ascenseur_prog
                         oldMoyenne = moyenne;
                     }
                 }
-
                 arrive = arriverALetage(oldMoyenne);
             }
 
@@ -118,6 +116,7 @@ namespace ascenseur_prog
                 Debug.Print(distEtage[1].ToString());
                 Debug.Print(distance.ToString());
                 */
+                Debug.Print("Arriver");
                 stop = true;
             }
 
@@ -129,38 +128,46 @@ namespace ascenseur_prog
             int[] etage = etages[etageToGo] as int[];
             if (state < etage[1] && state < etage[0])
             {
+                Debug.Print("Trop Haut");
                 changeSensMotor(false);
             }
             else
             {
+                Debug.Print("Trop Bas");
                 changeSensMotor(true);
             }
         }
 
         static void microswitch_OnInterrupt(uint data1, uint data2, DateTime time)
         {
-            Debug.Print("l'autre sens");
             if (data1 == 33)
             {
+                Debug.Print("Clique Monte");
                 changeSensMotor(false);
             }
             if (data1 == 1)
             {
+                Debug.Print("Clique Descend");
                 changeSensMotor(true);
             }
         }
 
         static void changeSensMotor(bool sens)
         {
+            Debug.Print("Inverse");
             dir.Write(sens);
         }
 
         static void changerEtatMotor(bool etat)
         {
             if (etat)
+            {
                 motorDriver.Start();
+                Debug.Print("Start");
+            }
             else
             {
+                Debug.Print("Stop");
                 motorDriver.Stop();
             }
         }
@@ -171,16 +178,18 @@ namespace ascenseur_prog
             char car = Convert.ToChar(rx_byte[0]);
             if (car != 's')
             {
-                Debug.Print("Etage");
+                Debug.Print("Etage" + car);
                 etageToGo = Convert.ToInt32(car.ToString()) - 1;
                 arrive = false;
-                if (!goEtage.IsAlive)
-                {
+                //if (goEtage.ThreadState)
+                //{
+                    Debug.Print("Start Thread " + goEtage.ThreadState.ToString());
                     goEtage.Start();
-                }
+                //}
             }
             else
             {
+                Debug.Print("Stop command");
                 changerEtatMotor(false);
             }
         }
