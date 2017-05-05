@@ -10,55 +10,49 @@ namespace ascenseur_prog
 {
     public class Program
     {
+        static SerialPort UART = new SerialPort("COM3", 115200);
+        static byte[] rx_byte = new byte[1];
+        static AnalogInput captBas = new AnalogInput(Cpu.AnalogChannel.ANALOG_0);
+        static AnalogInput captHaut = new AnalogInput(Cpu.AnalogChannel.ANALOG_3);
+        static OutputPort dir = new OutputPort(FEZSpider.Socket11.Pin9, true);
+        static InputPort microSwitchBas = new InterruptPort(FEZSpider.Socket4.Pin3, true, Port.ResistorMode.PullDown, Port.InterruptMode.InterruptEdgeLow);
+        static InputPort microSwitchHaut = new InterruptPort(FEZSpider.Socket3.Pin3, true, Port.ResistorMode.PullDown, Port.InterruptMode.InterruptEdgeLow);
+
         public static void Main()
         {
-            AnalogInput captBas = new AnalogInput(Cpu.AnalogChannel.ANALOG_0);
-            AnalogInput captHaut = new AnalogInput(Cpu.AnalogChannel.ANALOG_3);
-            OutputPort dir = new OutputPort(FEZSpider.Socket8.Pin9, true);
-            InputPort microswitchBas = new InputPort(FEZSpider.Socket4.Pin3, true, Port.ResistorMode.PullDown);
-            InputPort microSwitchHaut = new InputPort(FEZSpider.Socket3.Pin3, true, Port.ResistorMode.PullDown);
-
-            double frequence = 38000; //Période en microseconde
+            UART.DataReceived += UART_DataReceived;
+            UART.Open();
+                        double frequence = 38000; //Période en microseconde
             double rapportCyclique = 0.5; // Période en microseconde
 
-            PWM motorDriver = new PWM(FEZSpider.Socket8.Pwm7, frequence, rapportCyclique, false);
+            microSwitchBas.OnInterrupt += microswitch_OnInterrupt;
+            microSwitchHaut.OnInterrupt += microswitch_OnInterrupt;
+
+            PWM motorDriver = new PWM(FEZSpider.Socket11.Pwm7, frequence, rapportCyclique, false);
 
             motorDriver.Start();
-            int i = 0;
-            while (true)
+        }
+
+        static void microswitch_OnInterrupt(uint data1, uint data2, DateTime time)
+        {
+            if (data1 == 33)
             {
-                if (microswitchBas.Read() && dir.Read())
-                {
-                    dir.Write(false);
-                    Debug.Print("Monte");
-                }
-
-                if (microSwitchHaut.Read() && !dir.Read())
-                {
-                    Debug.Print("Descend");
-                    dir.Write(true);
-                }
-
-                if (microswitchBas.Read() && microSwitchHaut.Read())
-                {
-                    motorDriver.Stop();
-                    return;
-                }
-
-                i++;
-                if (i > 750)
-                {
-                    double distHaut = 100 * captHaut.Read();
-                    double distBas = 100 * captBas.Read();
-                    i = 0;
-                }
+                dir.Write(false);
+            }
+            if (data1 == 1)
+            {
+                dir.Write(true);
+                
             }
         }
 
-        public void recieveData()
+        static void UART_DataReceived(object sender, SerialDataReceivedEventArgs e)
         {
-            
-            
+            UART.Read(rx_byte, 0, 1);
+
+            char car = Convert.ToChar(rx_byte[0]);
+
+            Debug.Print(car.ToString());
         }
     }
 }
