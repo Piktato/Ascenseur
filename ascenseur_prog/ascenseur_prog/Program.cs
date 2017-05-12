@@ -17,6 +17,8 @@ namespace ascenseur_prog
         static int[] etage3 = { 480, 490 };
         static int etageToGo;
 
+        const bool MONTE = false;
+
         //  Communication
         static SerialPort UART = new SerialPort("COM3", 115200);
         static byte[] rx_byte = new byte[1];
@@ -26,12 +28,12 @@ namespace ascenseur_prog
         static AnalogInput captHaut = new AnalogInput(Cpu.AnalogChannel.ANALOG_3);
 
         //  Microswitch
-        static InputPort microSwitchBas = new InterruptPort(FEZSpider.Socket4.Pin3, true, Port.ResistorMode.PullDown, Port.InterruptMode.InterruptEdgeLow);
-        static InputPort microSwitchHaut = new InterruptPort(FEZSpider.Socket3.Pin3, true, Port.ResistorMode.PullDown, Port.InterruptMode.InterruptEdgeLow);
+        static InputPort microSwitchBas = new InterruptPort(FEZSpider.Socket4.Pin3, true, Port.ResistorMode.PullDown, Port.InterruptMode.InterruptEdgeHigh);
+        static InputPort microSwitchHaut = new InterruptPort(FEZSpider.Socket3.Pin3, true, Port.ResistorMode.PullDown, Port.InterruptMode.InterruptEdgeHigh);
 
         //  Motor
-        static OutputPort dir = new OutputPort(FEZSpider.Socket11.Pin9, true);
-        static PWM motorDriver;
+        static OutputPort sensRotation = new OutputPort(FEZSpider.Socket11.Pin9, true);
+        static OutputPort motorDriver;
 
         static bool arrive = false;
 
@@ -45,14 +47,13 @@ namespace ascenseur_prog
 
             UART.DataReceived += UART_DataReceived;
             UART.Open();
-            double frequence = 38000; //Période en microseconde
-            double rapportCyclique = 0.5; // Période en microseconde
-            motorDriver = new PWM(FEZSpider.Socket11.Pwm7, frequence, rapportCyclique, true);
+
+            motorDriver = new OutputPort(FEZSpider.Socket11.Pin7, true);
 
             microSwitchHaut.OnInterrupt += microswitch_OnInterrupt;
             microSwitchBas.OnInterrupt += microswitch_OnInterrupt;
 
-            motorDriver.Stop();
+            motorDriver.Write(true);
 
             Thread.Sleep(-1);
         }
@@ -74,28 +75,24 @@ namespace ascenseur_prog
         public static void aLetage()
         {
             int oldMoyenne = 0;
+            int moyenne = calculateDistance();
             changerEtatMotor(true);
-            UpOrDown(calculateDistance());
-
+            oldMoyenne = calculateDistance();
+            UpOrDown(moyenne);
+ 
             while (!arrive)
             {
-                int moyenne = calculateDistance();
-
-                if (dir.Read())
+                moyenne = calculateDistance();
+                if (moyenne <= oldMoyenne && sensRotation.Read())
                 {
-                    if (moyenne < oldMoyenne)
-                    {
-                        Debug.Print("Descend : moyenne  " + moyenne);
-                        oldMoyenne = moyenne;
-                    }
+                    Debug.Print("Descend : moyenne  " + moyenne);
+                    oldMoyenne = moyenne;
                 }
-                else
+
+                if (moyenne >= oldMoyenne && !sensRotation.Read())
                 {
-                    if (moyenne > oldMoyenne)
-                    {
-                        Debug.Print("Monte : moyenne  " + moyenne);
-                        oldMoyenne = moyenne;
-                    }
+                    Debug.Print("Monte : moyenne  " + moyenne);
+                    oldMoyenne = moyenne;
                 }
                 arrive = arriverALetage(oldMoyenne);
             }
@@ -111,11 +108,6 @@ namespace ascenseur_prog
 
             if (distance < distEtage[1] && distance > distEtage[0])
             {
-                /*
-                Debug.Print(distEtage[0].ToString());
-                Debug.Print(distEtage[1].ToString());
-                Debug.Print(distance.ToString());
-                */
                 Debug.Print("Arriver");
                 stop = true;
             }
@@ -128,13 +120,11 @@ namespace ascenseur_prog
             int[] etage = etages[etageToGo] as int[];
             if (state < etage[1] && state < etage[0])
             {
-                Debug.Print("Trop Haut");
-                changeSensMotor(false);
+                changeSensMotor(MONTE);
             }
             else
             {
-                Debug.Print("Trop Bas");
-                changeSensMotor(true);
+                changeSensMotor(!MONTE);
             }
         }
 
@@ -142,34 +132,24 @@ namespace ascenseur_prog
         {
             if (data1 == 33)
             {
-                Debug.Print("Clique Monte");
-                changeSensMotor(false);
+                sensRotation.Write(false);
+                motorDriver.Write(true);
             }
             if (data1 == 1)
             {
-                Debug.Print("Clique Descend");
-                changeSensMotor(true);
+                sensRotation.Write(true);
+                motorDriver.Write(false);
             }
         }
 
         static void changeSensMotor(bool sens)
         {
-            Debug.Print("Inverse");
-            dir.Write(sens);
+            sensRotation.Write(sens);
         }
 
         static void changerEtatMotor(bool etat)
         {
-            if (etat)
-            {
-                motorDriver.Start();
-                Debug.Print("Start");
-            }
-            else
-            {
-                Debug.Print("Stop");
-                motorDriver.Stop();
-            }
+            motorDriver.Write(!motorDriver.Read());
         }
 
         static void UART_DataReceived(object sender, SerialDataReceivedEventArgs e)
@@ -178,18 +158,14 @@ namespace ascenseur_prog
             char car = Convert.ToChar(rx_byte[0]);
             if (car != 's')
             {
-                Debug.Print("Etage" + car);
+                Debug.Print("Etage : " + car);
                 etageToGo = Convert.ToInt32(car.ToString()) - 1;
                 arrive = false;
-                //if (goEtage.ThreadState)
-                //{
-                    Debug.Print("Start Thread " + goEtage.ThreadState.ToString());
-                    goEtage.Start();
-                //}
+                goEtage = new Thread(aLetage);
+                goEtage.Start();
             }
             else
             {
-                Debug.Print("Stop command");
                 changerEtatMotor(false);
             }
         }
