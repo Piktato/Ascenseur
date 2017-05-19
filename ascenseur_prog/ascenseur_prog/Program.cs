@@ -11,13 +11,12 @@ namespace ascenseur_prog
     public class Program
     {
         static ArrayList etages = new ArrayList();
+        static ArrayList listEtage = new ArrayList();
 
         static int[] etage1 = { 140, 150 };
         static int[] etage2 = { 280, 290 };
         static int[] etage3 = { 480, 490 };
         static int etageToGo;
-
-        const bool MONTE = false;
 
         //  Communication
         static SerialPort UART = new SerialPort("COM3", 115200);
@@ -76,10 +75,10 @@ namespace ascenseur_prog
         {
             int oldMoyenne = 0;
             int moyenne = calculateDistance();
-            changerEtatMotor(true);
-            oldMoyenne = calculateDistance();
             UpOrDown(moyenne);
- 
+            StopStart(false);
+            oldMoyenne = calculateDistance();
+
             while (!arrive)
             {
                 moyenne = calculateDistance();
@@ -97,7 +96,7 @@ namespace ascenseur_prog
                 arrive = arriverALetage(oldMoyenne);
             }
 
-            changerEtatMotor(false);
+            StopStart(true);
             goEtage.Suspend();
         }
 
@@ -120,11 +119,11 @@ namespace ascenseur_prog
             int[] etage = etages[etageToGo] as int[];
             if (state < etage[1] && state < etage[0])
             {
-                changeSensMotor(MONTE);
+                changeSensMotor(false);
             }
             else
             {
-                changeSensMotor(!MONTE);
+                changeSensMotor(true);
             }
         }
 
@@ -145,11 +144,19 @@ namespace ascenseur_prog
         static void changeSensMotor(bool sens)
         {
             sensRotation.Write(sens);
+            StopStart(false);
         }
 
-        static void changerEtatMotor(bool etat)
+        static void StopStart(bool stop)
         {
-            motorDriver.Write(!motorDriver.Read());
+            if (stop)
+            {
+                motorDriver.Write(sensRotation.Read());
+            }
+            else
+            {
+                motorDriver.Write(!sensRotation.Read());
+            }
         }
 
         static void UART_DataReceived(object sender, SerialDataReceivedEventArgs e)
@@ -166,7 +173,7 @@ namespace ascenseur_prog
             }
             else
             {
-                changerEtatMotor(false);
+                StopStart(true);
             }
         }
     }
